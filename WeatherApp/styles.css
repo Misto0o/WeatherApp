@@ -1,0 +1,150 @@
+/* General Reset and Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #8C52FF, #C48BFC);
+    font-family: 'Poppins', sans-serif; /* Modern, readable font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.3);
+    max-width: 450px; /* Wider container for better readability */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Add animation for container */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2, label, p {
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+input {
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #8C52FF;
+}
+
+button {
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8b48d7;
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
+    color: #fff;
+}
+
+#weather-info {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#hourly-forecast {
+    margin-top: 30px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.hourly-item:hover {
+    transform: scale(1.1);
+}
+
+.hourly-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+}
+
+#hourly-heading {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#toggle-temp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px; /* Added padding for more clickable area */
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-temp:hover {
+    background-color: #8b48d7;
+}
+
+#toggle-temp span {
+    margin-left: 5px; /* Add space between icon and text */
+}
+
+
+#temp-div {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

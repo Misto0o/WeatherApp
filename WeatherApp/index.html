@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="weather-container" class="box has-text-centered" data-aos="fade-up">
+        <h2 class="title is-3 has-text-white">Weather App</h2>
+        <div class="field">
+            <div class="control has-icons-left">
+                <input type="text" id="city" class="input" spellcheck="true" placeholder="Enter city" aria-label="Enter city name">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-city"></i>
+                </span>
+            </div>
+        </div>
+        <button class="button is-primary is-light" onclick="getWeather()" aria-label="Search weather">
+            <span class="icon">
+                <i class="fas fa-search"></i>
+            </span>
+            <span>Search</span>
+        </button>
+
+        <!-- Temperature Display and Unit Toggle -->
+        <div id="temp-div" class="has-text-weight-bold my-4"></div>
+        <button id="toggle-temp" class="button is-small is-info" onclick="toggleTemperatureUnit()" title="Switch temperature unit">
+            <span class="icon">
+                <i class="fas fa-sync-alt"></i>
+            </span>
+            <span>Switch to Celsius</span>
+        </button>             
+
+        <div id="weather-icon" class="my-4" role="img" aria-label="Weather Icon"></div>
+        <div id="weather-info" class="content"></div>
+
+        <h3 id="hourly-heading" class="subtitle is-5 has-text-white mt-5">Hourly Forecast</h3>
+        <div id="hourly-forecast" class="is-flex is-justify-content-center is-align-items-center"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./weather.js"></script>
+</body>
+</html>
